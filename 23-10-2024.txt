@@ -1,0 +1,1534 @@
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++------+
+| x    |
++------+
+| 1000 |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++------+
+| b1   |
++------+
+| 1000 |
++------+
+1 row in set (0.00 sec)
+
++------+------+
+| x    | b2   |
++------+------+
+| 1000 | 2000 |
++------+------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro1(1);
++-------+
+| False |
++-------+
+| False |
++-------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro1(1000);
++------+
+| True |
++------+
+| True |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
++--------+------------+----------+------------+------------+
+5 rows in set (0.01 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as select * from dept;
+
+  open c1;
+        fetch c1 into dno, dnm, l, p, son;
+        select' at line 6
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*/' at line 1
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as select * from dept;
+
+  open c1;
+        fetch c1 into dno, dnm, l, p, son;
+        select' at line 6
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++------+------------+----------+--------+------------+
+| dno  | dnm        | l        | p      | son        |
++------+------------+----------+--------+------------+
+|   10 | ACCOUNTING | NEW YORK | r50mpm | 24/03/1989 |
++------+------------+----------+--------+------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select deptno, dname from dept;
+
+  open c1;
+        fetch c1 into dno, dnm;
+        select d' at line 7
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++------+------------+
+| dno  | dnm        |
++------+------------+
+|   10 | ACCOUNTING |
++------+------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++------+------------+
+| dno  | dnm        |
++------+------------+
+|   10 | ACCOUNTING |
++------+------------+
+1 row in set (0.00 sec)
+
++------+----------+
+| dno  | dnm      |
++------+----------+
+|   20 | RESEARCH |
++------+----------+
+1 row in set (0.00 sec)
+
++------+-------+
+| dno  | dnm   |
++------+-------+
+|   30 | SALES |
++------+-------+
+1 row in set (0.00 sec)
+
++------+------------+
+| dno  | dnm        |
++------+------------+
+|   40 | OPERATIONS |
++------+------------+
+1 row in set (0.01 sec)
+
++------+------+
+| dno  | dnm  |
++------+------+
+|   50 | HR   |
++------+------+
+1 row in set (0.01 sec)
+
+ERROR 1329 (02000): No data - zero rows fetched, selected, or processed
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++------+------------+
+| dno  | dnm        |
++------+------------+
+|   10 | ACCOUNTING |
++------+------------+
+1 row in set (0.00 sec)
+
++------+----------+
+| dno  | dnm      |
++------+----------+
+|   20 | RESEARCH |
++------+----------+
+1 row in set (0.00 sec)
+
++------+-------+
+| dno  | dnm   |
++------+-------+
+|   30 | SALES |
++------+-------+
+1 row in set (0.01 sec)
+
++------+------------+
+| dno  | dnm        |
++------+------------+
+|   40 | OPERATIONS |
++------+------------+
+1 row in set (0.01 sec)
+
++------+------+
+| dno  | dnm  |
++------+------+
+|   50 | HR   |
++------+------+
+1 row in set (0.01 sec)
+
++-------------------+
+| No data in cursor |
++-------------------+
+| No data in cursor |
++-------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select ename, job, deptno from em
+p;
++----------+---------------------+--------+
+| ename    | job                 | deptno |
++----------+---------------------+--------+
+| GITA     | Compliance officers |     30 |
+| VRUSHALI | Compliance officers |     50 |
+| SHARMIN  | Public Relation     |     20 |
+| BANDISH  | Public Relation     |     20 |
+| SMITH    | CLERK               |     20 |
+| AARAV    | CLERK               |     10 |
+| THOMAS   | CLERK               |     10 |
+| ALLEN    | SALESMAN            |     30 |
+| WARD     | SALESMAN            |     30 |
+| JONES    | MANAGER             |     20 |
+| MARTIN   | SALESMAN            |     30 |
+| BLAKE    | MANAGER             |     30 |
+| CLARK    | MANAGER             |     10 |
+| SCOTT    | ANALYST             |     20 |
+| KING     | PRESIDENT           |     10 |
+| FRED     | vice PRESIDENT      |     20 |
+| TURNER   | SALESMAN            |     30 |
+| ADAMS    | CLERK               |     20 |
+| JAMES    | CLERK               |     30 |
+| FORD     | ANALYST             |     20 |
+| HOFFMAN  | MANAGER             |     30 |
+| GRASS    | SALESMAN            |     30 |
+| MILLER   | CLERK               |     10 |
+| AARUSH   | SALESMAN            |     30 |
+| ALEX     | MANAGER             |     30 |
+| NATASHA  | CLERK               |     30 |
+| SANGITA  | Compliance officers |     50 |
+| SUPRIYA  | ANALYST             |     50 |
++----------+---------------------+--------+
+28 rows in set (0.03 sec)
+
+mysql> create table y1 as select ename, job, deptno from emp where 1=2;
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> drop table y1;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table y10 as select ename, job, deptno from emp where 1=2;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> create table y20 as select ename, job, deptno from
+ emp where 1=2;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int         | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| GENDER    | char(1)     | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  | MUL | NULL    |       |
+| MGR       | int         | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| SAL       | int         | YES  |     | NULL    |       |
+| COMM      | int         | YES  |     | NULL    |       |
+| DEPTNO    | int         | NO   | MUL | NULL    |       |
+| BONUSID   | int         | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| PHONE     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+14 rows in set (0.04 sec)
+
+mysql> desc y10;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| ename  | varchar(12) | YES  |     | NULL    |       |
+| job    | varchar(20) | YES  |     | NULL    |       |
+| deptno | int         | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc y20;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| ename  | varchar(12) | YES  |     | NULL    |       |
+| job    | varchar(20) | YES  |     | NULL    |       |
+| deptno | int         | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++--------+---------------------+---------+
+| _ename | _job                | _deptno |
++--------+---------------------+---------+
+| GITA   | Compliance officers |      30 |
++--------+---------------------+---------+
+1 row in set (0.00 sec)
+
++----------+---------------------+---------+
+| _ename   | _job                | _deptno |
++----------+---------------------+---------+
+| VRUSHALI | Compliance officers |      50 |
++----------+---------------------+---------+
+1 row in set (0.00 sec)
+
++---------+-----------------+---------+
+| _ename  | _job            | _deptno |
++---------+-----------------+---------+
+| SHARMIN | Public Relation |      20 |
++---------+-----------------+---------+
+1 row in set (0.01 sec)
+
++---------+-----------------+---------+
+| _ename  | _job            | _deptno |
++---------+-----------------+---------+
+| BANDISH | Public Relation |      20 |
++---------+-----------------+---------+
+1 row in set (0.01 sec)
+
++--------+-------+---------+
+| _ename | _job  | _deptno |
++--------+-------+---------+
+| SMITH  | CLERK |      20 |
++--------+-------+---------+
+1 row in set (0.01 sec)
+
++--------+-------+---------+
+| _ename | _job  | _deptno |
++--------+-------+---------+
+| AARAV  | CLERK |      10 |
++--------+-------+---------+
+1 row in set (0.01 sec)
+
++--------+-------+---------+
+| _ename | _job  | _deptno |
++--------+-------+---------+
+| THOMAS | CLERK |      10 |
++--------+-------+---------+
+1 row in set (0.01 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| ALLEN  | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.01 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| WARD   | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.02 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| JONES  | MANAGER |      20 |
++--------+---------+---------+
+1 row in set (0.02 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| MARTIN | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.02 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| BLAKE  | MANAGER |      30 |
++--------+---------+---------+
+1 row in set (0.02 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| CLARK  | MANAGER |      10 |
++--------+---------+---------+
+1 row in set (0.02 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| SCOTT  | ANALYST |      20 |
++--------+---------+---------+
+1 row in set (0.02 sec)
+
++--------+-----------+---------+
+| _ename | _job      | _deptno |
++--------+-----------+---------+
+| KING   | PRESIDENT |      10 |
++--------+-----------+---------+
+1 row in set (0.03 sec)
+
++--------+----------------+---------+
+| _ename | _job           | _deptno |
++--------+----------------+---------+
+| FRED   | vice PRESIDENT |      20 |
++--------+----------------+---------+
+1 row in set (0.03 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| TURNER | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.03 sec)
+
++--------+-------+---------+
+| _ename | _job  | _deptno |
++--------+-------+---------+
+| ADAMS  | CLERK |      20 |
++--------+-------+---------+
+1 row in set (0.03 sec)
+
++--------+-------+---------+
+| _ename | _job  | _deptno |
++--------+-------+---------+
+| JAMES  | CLERK |      30 |
++--------+-------+---------+
+1 row in set (0.03 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| FORD   | ANALYST |      20 |
++--------+---------+---------+
+1 row in set (0.03 sec)
+
++---------+---------+---------+
+| _ename  | _job    | _deptno |
++---------+---------+---------+
+| HOFFMAN | MANAGER |      30 |
++---------+---------+---------+
+1 row in set (0.04 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| GRASS  | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.04 sec)
+
++--------+-------+---------+
+| _ename | _job  | _deptno |
++--------+-------+---------+
+| MILLER | CLERK |      10 |
++--------+-------+---------+
+1 row in set (0.04 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| AARUSH | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.04 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| ALEX   | MANAGER |      30 |
++--------+---------+---------+
+1 row in set (0.04 sec)
+
++---------+-------+---------+
+| _ename  | _job  | _deptno |
++---------+-------+---------+
+| NATASHA | CLERK |      30 |
++---------+-------+---------+
+1 row in set (0.04 sec)
+
++---------+---------------------+---------+
+| _ename  | _job                | _deptno |
++---------+---------------------+---------+
+| SANGITA | Compliance officers |      50 |
++---------+---------------------+---------+
+1 row in set (0.05 sec)
+
++---------+---------+---------+
+| _ename  | _job    | _deptno |
++---------+---------+---------+
+| SUPRIYA | ANALYST |      50 |
++---------+---------+---------+
+1 row in set (0.05 sec)
+
++-------------------+
+| No data in cursor |
++-------------------+
+| No data in cursor |
++-------------------+
+1 row in set (0.05 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * ffrom y10;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ffrom y10' at line 1
+mysql> select * from y10;
+Empty set (0.00 sec)
+
+mysql> select * from y20;
+Empty set (0.00 sec)
+
+mysql> call pro1();
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.00 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.00 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.02 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.03 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.03 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.03 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.03 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.03 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.03 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.04 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.04 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.04 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.04 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.04 sec)
+
++-----------------+
+| nither 10 or 20 |
++-----------------+
+| nither 10 or 20 |
++-----------------+
+1 row in set (0.04 sec)
+
++-------------------+
+| No data in cursor |
++-------------------+
+| No data in cursor |
++-------------------+
+1 row in set (0.04 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc y10;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| ename  | varchar(12) | YES  |     | NULL    |       |
+| job    | varchar(20) | YES  |     | NULL    |       |
+| deptno | int         | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * ffrom y10;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ffrom y10' at line 1
+mysql> select * from y10;
++--------+-----------+--------+
+| ename  | job       | deptno |
++--------+-----------+--------+
+| AARAV  | CLERK     |     10 |
+| THOMAS | CLERK     |     10 |
+| CLARK  | MANAGER   |     10 |
+| KING   | PRESIDENT |     10 |
+| MILLER | CLERK     |     10 |
++--------+-----------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select * from y20;
++---------+-----------------+--------+
+| ename   | job             | deptno |
++---------+-----------------+--------+
+| SHARMIN | Public Relation |     20 |
+| BANDISH | Public Relation |     20 |
+| SMITH   | CLERK           |     20 |
+| JONES   | MANAGER         |     20 |
+| SCOTT   | ANALYST         |     20 |
+| FRED    | vice PRESIDENT  |     20 |
+| ADAMS   | CLERK           |     20 |
+| FORD    | ANALYST         |     20 |
++---------+-----------------+--------+
+8 rows in set (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
++--------+------------+----------+------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('abc')
+    -> ;
++------+
+| x    |
++------+
+| NULL |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('sales');
++------+
+| x    |
++------+
+|   30 |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('abc');
++----------------+
+| Not data found |
++----------------+
+| Not data found |
++----------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('sales');
++--------+---------------------+---------+
+| _ename | _job                | _deptno |
++--------+---------------------+---------+
+| GITA   | Compliance officers |      30 |
++--------+---------------------+---------+
+1 row in set (0.01 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| ALLEN  | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.01 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| WARD   | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.02 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| MARTIN | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.02 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| BLAKE  | MANAGER |      30 |
++--------+---------+---------+
+1 row in set (0.02 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| TURNER | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.02 sec)
+
++--------+-------+---------+
+| _ename | _job  | _deptno |
++--------+-------+---------+
+| JAMES  | CLERK |      30 |
++--------+-------+---------+
+1 row in set (0.02 sec)
+
++---------+---------+---------+
+| _ename  | _job    | _deptno |
++---------+---------+---------+
+| HOFFMAN | MANAGER |      30 |
++---------+---------+---------+
+1 row in set (0.02 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| GRASS  | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.03 sec)
+
++--------+----------+---------+
+| _ename | _job     | _deptno |
++--------+----------+---------+
+| AARUSH | SALESMAN |      30 |
++--------+----------+---------+
+1 row in set (0.03 sec)
+
++--------+---------+---------+
+| _ename | _job    | _deptno |
++--------+---------+---------+
+| ALEX   | MANAGER |      30 |
++--------+---------+---------+
+1 row in set (0.03 sec)
+
++---------+-------+---------+
+| _ename  | _job  | _deptno |
++---------+-------+---------+
+| NATASHA | CLERK |      30 |
++---------+-------+---------+
+1 row in set (0.03 sec)
+
++-------------------+
+| No data in cursor |
++-------------------+
+| No data in cursor |
++-------------------+
+1 row in set (0.03 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ELSE
+        select "Good";
+end if;
+
+end b1' at line 8
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query Ocall rows affected (0.00
+    ->
+    ->
+    ->
+    -> ^C
+mysql>
+mysql>
+mysql>
+mysql> call pro1();
++------+
+| Good |
++------+
+| Good |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
+ERROR 1644 (45000): Okay
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
+ERROR 1644 (45000): Okay
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+ERROR 1415 (0A000): Not allowed to return a result set from a function
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 'Hello World..'  into x;
+        return x;
+end b1' at line 4
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select f1();
+ERROR 1406 (22001): Data too long for column 'x' at row 1
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select f1();
++---------------+
+| f1()          |
++---------------+
+| Hello World.. |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call display();
++-------------------------+
+| f1()                    |
++-------------------------+
+| Hello World.. by saleel |
++-------------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in x int, in y int) returns int
+deterministic
+b1:begin
+        return x + y;
+end b1' at line 1
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select f1(
+    -> ^C
+mysql> select f1(10, 10);
++------------+
+| f1(10, 10) |
++------------+
+|         20 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select ename, job, deptno from emp where deptno = f1(10,10);
++---------+-----------------+--------+
+| ename   | job             | deptno |
++---------+-----------------+--------+
+| SHARMIN | Public Relation |     20 |
+| BANDISH | Public Relation |     20 |
+| SMITH   | CLERK           |     20 |
+| JONES   | MANAGER         |     20 |
+| SCOTT   | ANALYST         |     20 |
+| FRED    | vice PRESIDENT  |     20 |
+| ADAMS   | CLERK           |     20 |
+| FORD    | ANALYST         |     20 |
++---------+-----------------+--------+
+8 rows in set (0.00 sec)
+
+mysql> select sal, comm, f1(sal,comm) from emp;
++------+------+--------------+
+| sal  | comm | f1(sal,comm) |
++------+------+--------------+
+| 1750 | NULL |         NULL |
+| 1750 | NULL |         NULL |
+| 1750 | NULL |         NULL |
+| 1750 | NULL |         NULL |
+|  800 | NULL |         NULL |
+| 3350 | NULL |         NULL |
+| 1750 | NULL |         NULL |
+| 1600 |  300 |         1900 |
+| 1250 |  500 |         1750 |
+| 2975 | NULL |         NULL |
+| 1250 | 1400 |         2650 |
+| 2850 | NULL |         NULL |
+| 2450 | NULL |         NULL |
+| 3000 | NULL |         NULL |
+| 5000 | NULL |         NULL |
+| 5000 | NULL |         NULL |
+| 1500 |    0 |         1500 |
+| 1100 | NULL |         NULL |
+|  950 | NULL |         NULL |
+| 3000 | NULL |         NULL |
+| 4150 | NULL |         NULL |
+| 2575 | 2700 |         5275 |
+| 1300 | NULL |         NULL |
+| 1350 | 2700 |         4050 |
+| 1250 |  500 |         1750 |
+| 1750 | NULL |         NULL |
+| 1750 | NULL |         NULL |
+| 1750 | NULL |         NULL |
++------+------+--------------+
+28 rows in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select sal, comm, f1(sal,comm) from emp;
++------+------+--------------+
+| sal  | comm | f1(sal,comm) |
++------+------+--------------+
+| 1750 | NULL |         1750 |
+| 1750 | NULL |         1750 |
+| 1750 | NULL |         1750 |
+| 1750 | NULL |         1750 |
+|  800 | NULL |          800 |
+| 3350 | NULL |         3350 |
+| 1750 | NULL |         1750 |
+| 1600 |  300 |         1900 |
+| 1250 |  500 |         1750 |
+| 2975 | NULL |         2975 |
+| 1250 | 1400 |         2650 |
+| 2850 | NULL |         2850 |
+| 2450 | NULL |         2450 |
+| 3000 | NULL |         3000 |
+| 5000 | NULL |         5000 |
+| 5000 | NULL |         5000 |
+| 1500 |    0 |         1500 |
+| 1100 | NULL |         1100 |
+|  950 | NULL |          950 |
+| 3000 | NULL |         3000 |
+| 4150 | NULL |         4150 |
+| 2575 | 2700 |         5275 |
+| 1300 | NULL |         1300 |
+| 1350 | 2700 |         4050 |
+| 1250 |  500 |         1750 |
+| 1750 | NULL |         1750 |
+| 1750 | NULL |         1750 |
+| 1750 | NULL |         1750 |
++------+------+--------------+
+28 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
++--------+------------+----------+------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> select max(deptno) from dept;
++-------------+
+| max(deptno) |
++-------------+
+|          50 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select max(deptno) + 1from dept;
+ERROR 1054 (42S22): Unknown column 'deptno' in 'field list'
+mysql> select max(deptno) + 1 from dept;
++-----------------+
+| max(deptno) + 1 |
++-----------------+
+|              51 |
++-----------------+
+1 row in set (0.01 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select f1();
++------+
+| f1() |
++------+
+|   51 |
++------+
+1 row in set (0.00 sec)
+
+mysql> insert into dept values(f1(),1,1,1,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into dept values(f1(),1,1,1,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into dept values(f1(),1,1,1,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     51 | 1          | 1        | 1          | 1          |
+|     52 | 1          | 1        | 1          | 1          |
+|     53 | 1          | 1        | 1          | 1          |
++--------+------------+----------+------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select 'SA/1001' + 1;
++---------------+
+| 'SA/1001' + 1 |
++---------------+
+|             1 |
++---------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> select 'SA/1007' + 1;
++---------------+
+| 'SA/1007' + 1 |
++---------------+
+|             1 |
++---------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> show variables like 'auto%';
++--------------------------+-------+
+| Variable_name            | Value |
++--------------------------+-------+
+| auto_generate_certs      | ON    |
+| auto_increment_increment | 1     |
+| auto_increment_offset    | 1     |
+| autocommit               | ON    |
+| automatic_sp_privileges  | ON    |
++--------------------------+-------+
+5 rows in set (0.05 sec)
+
+mysql> set autocommit =off;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show variables like 'auto%';
++--------------------------+-------+
+| Variable_name            | Value |
++--------------------------+-------+
+| auto_generate_certs      | ON    |
+| auto_increment_increment | 1     |
+| auto_increment_offset    | 1     |
+| autocommit               | OFF   |
+| automatic_sp_privileges  | ON    |
++--------------------------+-------+
+5 rows in set (0.00 sec)
+
+mysql> create table g(c1 int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into g values(10);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
++------+
+1 row in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from g;
+Empty set (0.00 sec)
+
+mysql> insert into g values(10);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
++------+
+1 row in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
++------+
+1 row in set (0.00 sec)
+
+mysql> insert into g values(20);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
+|   20 |
++------+
+2 rows in set (0.00 sec)
+
+mysql> create table g1(c1 int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc g;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> desc g1;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
+|   20 |
++------+
+2 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
+|   20 |
++------+
+2 rows in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select f1();
++-----------------+
+| f1()            |
++-----------------+
+| Data inserted.. |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
+|   20 |
+|   30 |
++------+
+3 rows in set (0.00 sec)
+
+mysql> select f1();
++-----------------+
+| f1()            |
++-----------------+
+| Data inserted.. |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
+|   20 |
+|   30 |
+|   30 |
++------+
+4 rows in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select f1(31);
++-----------------+
+| f1(31)          |
++-----------------+
+| Data inserted.. |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> select f1(31);
++-----------------+
+| f1(31)          |
++-----------------+
+| Data inserted.. |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> select f1(31);
++-----------------+
+| f1(31)          |
++-----------------+
+| Data inserted.. |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
+|   20 |
+|   30 |
+|   30 |
+|   31 |
+|   31 |
+|   31 |
++------+
+7 rows in set (0.00 sec)
+
+mysql> select * from g;
++------+
+| c1   |
++------+
+|   10 |
+|   20 |
+|   30 |
+|   30 |
+|   31 |
+|   31 |
+|   31 |
++------+
+7 rows in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+ERROR 1422 (HY000): Explicit or implicit commit is not allowed in stored function or trigger.
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select ename, f1(ename) from emp;
+ERROR 1054 (42S22): Unknown column 'x' in 'field list'
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select ename, f1(ename) from emp;
++----------+-----------+
+| ename    | f1(ename) |
++----------+-----------+
+| GITA     | Gita      |
+| VRUSHALI | Vrushali  |
+| SHARMIN  | Sharmin   |
+| BANDISH  | Bandish   |
+| SMITH    | Smith     |
+| AARAV    | Aarav     |
+| THOMAS   | Thomas    |
+| ALLEN    | Allen     |
+| WARD     | Ward      |
+| JONES    | Jones     |
+| MARTIN   | Martin    |
+| BLAKE    | Blake     |
+| CLARK    | Clark     |
+| SCOTT    | Scott     |
+| KING     | King      |
+| FRED     | Fred      |
+| TURNER   | Turner    |
+| ADAMS    | Adams     |
+| JAMES    | James     |
+| FORD     | Ford      |
+| HOFFMAN  | Hoffman   |
+| GRASS    | Grass     |
+| MILLER   | Miller    |
+| AARUSH   | Aarush    |
+| ALEX     | Alex      |
+| NATASHA  | Natasha   |
+| SANGITA  | Sangita   |
+| SUPRIYA  | Supriya   |
++----------+-----------+
+28 rows in set (0.00 sec)
+
+mysql> source C:\abc\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select f1();
++--------+
+| f1()   |
++--------+
+| Pd[lGz |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select f1();
++--------+
+| f1()   |
++--------+
+| YuCdMy |
++--------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> create table g4(c1 varchar(100));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into g1 values(f1());
+ERROR 1366 (HY000): Incorrect integer value: 'EbWzHn' for column 'c1' at row 1
+mysql> insert into g4 values(f1());
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into g4 values(f1());
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into g4 values(f1());
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into g4 values(f1());
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into g4 values(f1());
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from g4;
++--------+
+| c1     |
++--------+
+| S{VbXg |
+| NxWn[k |
+| ChAjTp |
+| SuSdOk |
+| ImHaHk |
++--------+
+5 rows in set (0.00 sec)
+
+mysql> select 1001GITA/1;
+ERROR 1054 (42S22): Unknown column '1001GITA' in 'field list'
+mysql> select '1001GITA'/1;
++--------------+
+| '1001GITA'/1 |
++--------------+
+|         1001 |
++--------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> A
