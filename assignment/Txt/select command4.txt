@@ -1,0 +1,16 @@
+1.select count(*) from emp;
+2.select max(sal) maxSalary,min(sal) minSalary from emp;
+3. select count(*) from emp where sal > 3000;
+4.select deptno department_Number,count(*) total_count from emp group by deptno;
+5. a.select ename, sal from emp where sal = (select max(sal) from emp);
+	b.select ename, sal from emp where sal IN (select max(sal) from emp);
+6. a. select job,sal from emp;
+	b.select job,sum(sal) from emp group by job;
+7.select job,max(sal) from emp group by job;
+8.	a. select job,avg(sal) from emp group by job;
+	b. select job,round(avg(sal),2) `average salary` from emp group by job;
+9.select count(*) `emp at dept_no_20` from emp where deptno = 20;
+10.select count(*) `manager count ad dept_10` from emp where deptno = 10 and job='manager';
+11.select count(*) `no commision` from emp where deptno = 20 and comm is null;
+12.//incomplete 
+select ename from emp where sal = (select max(sal) max from emp where deptno = (select deptno d1 from dept where dname='ACCOUNTING'));

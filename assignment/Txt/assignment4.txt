@@ -1,0 +1,8 @@
+1. select * from student;
+2. select namefirst,namelast from student order by namefirst ;
+3. select namefirst,namelast,DOB,emailID from student limit 5;
+4. select * from student where ID IN (1,2,5,7);
+5. select namefirst,namelast,emailID from student where ID NOT IN (5,10,15,7);
+6. select * from faculty limit 2;
+7. select * from student_phone order by number ;
+8. select * from student_address where ID IN(2,4,6,10) order by ID  ;

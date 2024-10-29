@@ -1,0 +1,14 @@
+1.select ename from emp where job='manager' ;
+2.select ename from emp where sal > 3000 ;
+3.select ename from emp where substring(ename  ,2,1) = 'A';
+4.select empno,ename,hiredate,job from emp where deptno=10 ;
+5. select * from emp where sal > 2000 ;
+6.select ename from emp where deptno IN (10,20) and ename like 'A%B' ;
+7. select * from emp where hiredate='1990-12-21';
+8.select empno,ename,job,sal from emp where deptno=10;	
+9. select * from emp where sal > 2500 order by sal desc;
+10. select * from emp where ename like '%f%' ;
+11.select empno,ename,job,sal from emp where deptno=10;
+12. select * from emp where sal > 2500 order by sal desc ;
+13.select * from emp where ename like '%f%' ;
+14.

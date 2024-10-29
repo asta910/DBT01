@@ -1,0 +1,35 @@
+1. select * from student;
+2. select namefirst,namelast from student;
+3. select namefirst,namelast from student;
+4. select namefirst,namelast from student;
+5. select * from student where substring(namefirst,2,1) = "A";
+6. select * from student where namefirst like '%A%';
+7. select * from student where DOB = '1986-12-14';
+8. a. select * from student where namefirst like 'R%' ;
+	b. select * from student where left(namefirst,1) = 'R' ;
+9. select namefirst as firstname ,namelast as lastname from student;
+10. select * from student order by DOB ;
+11. select * from student where left(namefirst,1)='S' limit 2;
+12. select * from student where DOB = '1986-12-14';
+13. select * from modules where duration = 1;
+14. select * from course_batches where capacity = 80;
+15. select * from  student_qualifications where name='BE' and marks>70;
+16. select * from  student_qualifications where name='BE' and year=2017;
+17. select * from  student_qualifications where name='BE' and marks>80 and year =2017;
+18. select * from faculty_qualifications where name= 'BE' and university='Harvard university';
+19. select * from course where duration = 6;
+20. 	a. select * from modules where duration= 1 or duration =2 order by duration;
+	b. select * from modules where duration in (1,2) order by duration;
+21. select namefirst,namelast, (case when year(DOB) < 1980 then 'The student can vote' 
+	else 'The student cannot vote' end ) as status from student ;
+22. select distinct university from student_qualifications ;
+23. 	a. select name,id, marks from student_qualifications where marks < (select max(marks) from 
+		student_qualifications where name='BE' )
+	 	and name='BE' order by marks desc limit 1 ;
+	b. select * from (select dense_rank() over(order by marks desc) R1, id, marks from student_qualifications 
+		where name='BE') T1 where R1=2  limit 1 ;
+24. select * from (select dense_rank() over(order by marks) R1, id, marks from student_qualifications where name='BE') T1
+	 where R1=2  limit 1 ;
+25. 	a. select row_number() over()R1,namefirst,namelast,DOB,emailID from (select row_number() over() R2,
+		namefirst,namelast,DOB,emailID from student order by R2 desc ) T1 limit 7;
+	b.  select * from student order by id desc limit 7;

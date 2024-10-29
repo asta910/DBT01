@@ -1,0 +1,21 @@
+1. select count(*) numberOfStudents from student;
+2. select count(*) numberOfStudents from student where year(DOB) = 1986;
+3. select count(*) numberOfStudents from student where namefirst like 'B%';
+4. select count(*) numberOfStudents from student where date_format(DOB,'%M') = 'July' ;
+5. select studentId,count(*) count from student_phone group by studentId having count > 1 ;
+6. select university,count(university) from student_qualifications group by university  ;
+7. select university,count(studentID) from student_qualifications where name='BE'  group by university;
+8. select count(studentID) from student_qualifications where name='BE';
+9. select count(studentID) from student_qualifications where name !='BE';
+10. select max(marks) from student_qualifications where name='BE';
+11. select min(marks) from student_qualifications where name='BE';
+12. select count(*) from course_batches where starton = '2016-02-01';
+13. select * from student_qualifications where name='BE' and marks>60;
+14. select * from student_qualifications where name='BE' and marks>60 and university='Harvard University' ;
+15. select count(*) courses from course;
+16. select count(*) from (select distinct university from student_qualifications group by university) T1 ;
+17. select max(marks) from student_qualifications where name='BE';
+
+
+
+

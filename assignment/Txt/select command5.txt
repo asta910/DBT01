@@ -1,0 +1,12 @@
+1. select s.sname as sales_perspm ,c.cname as customer from salesperson s,customers c where s.sid=c.snum;
+2. select e.ename,m.ename from emp e,emp m where e.mgr=m.empno;
+3. select e.*,d.* from emp e inner join dept d on e.deptno=d.deptno;
+4. select c.name,o.* from customer c inner join ord o on c.custID=o.custID where year(orderdate)=1987;
+5. select  s.sname,c.cname from salespeople s inner join customers c on s.snum=c.snum  ;
+6. select  s.sname,c.cname from salespeople s inner join customers c on s.snum=c.snum  where s.comm='0';
+7.
+8. select * from product where descrip like '%TENNIS%' ;
+9.
+10.
+11. select job from emp where deptno IN (select deptno from dept where dname IN ('ACCOUNTING','RESEARCH'));
+12.

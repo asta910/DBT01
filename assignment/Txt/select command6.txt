@@ -1,0 +1,6 @@
+1.select ename,job from emp where mgr is null;
+2.
+3. select * from emp where day(hiredate) = (select day(hiredate) from emp where ename='King');
+4. select max(sal) - (select min(sal) from emp where deptno = 10) diffrence from emp where deptno = 10 ;
+5.select round(abs(avg(sal) - (select avg(sal) from emp where deptno = 20)),2) diffrence from emp where deptno = 30 ;
+6.

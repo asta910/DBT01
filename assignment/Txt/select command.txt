@@ -1,0 +1,17 @@
+1. select * from emp;
+2. select ename from emp;
+3. select ename,job from emp;
+4. select ename,job from emp;
+5. select * from emp;
+6. select * from dept;
+7. select empno,ename as 'Employee Name',sal from emp;
+8. select job as emp_job,comm as emp_comm,ename as emp_name from emp;
+9. select loc as 'Location',dname as 'Department Names' from dept;
+10. select distinct mgr from emp;
+11.select concat(empno,' ',ename,' ',mgr) as ConcatedNun from emp;
+12.select concat(empno,',',ename,',',mgr,',',job,',',hiredate,',',sal,',',
+	comm,',',deptno,',',bonusid,',',`user name`,',',pwd,',',phone,',',isActive) as ConcatedNun from emp;
+13. 
+14. select concat(ename,' earns ',sal,' monthly, but wants ',sal*3) as `Dream Salaries` from emp;
+15. select distinct job from emp;
+16. 

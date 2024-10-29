@@ -1,0 +1,56 @@
+q1. select namefirst,length(namefirst) from student;
+q2. select * from student where length(namefirst)=4;
+q3. select ascii(substring(namefirst,3,1)) from student;
+q4. select lcase(namefirst) first_name ,lcase(namelast) last_name from student;
+q5. select namefirst,namelast,emailId from student where length(emailID) =7;
+q6. select namefirst,namelast,left(namefirst,3) first_three from student;
+q7. select namefirst,namelast,right(namefirst,3) first_three from student;
+q8. select * from student s JOIN student_phone p ON s.ID = p.ID where left(p.number,2) = 70;
+q9. select * from student where ID < 6;  || select * from student LIMIT 5;  
+q10. select * from student ORDER BY ID DESC LIMIT 5 ;
+q11. select * from student ORDER BY namefirst;
+q12. select * from student ORDER BY namelast DESC;
+q13. select ID,namefirst,namelast,DOB,emailId from student where length(emailID) > 20;
+q14. select concat(namefirst,namelast) `full name` from student;
+q15. select 	
+	case when namefirst IS null then '' else namefirst end as namefirst,
+	case when namelast IS NULL then ' ' else namelast end as namelast, 
+	case when emailId IS null then ' ' else emailId end as emailId from student;
+q16. select lcase(namefirst),lcase(namelast) from student;
+q17. select lcase(namefirst),lcase(namelast) from student;
+q18. select lcase(namefirst),lcase(namelast) from student;
+q19. select lcase(namefirst),lcase(namelast) from student;
+q20. select namefirst,replace(namefirst,substring(namefirst,length(namefirst)-1,1),
+	substring(namefirst,2,1)) as updated from student;
+q21. select ASCII(namefirst) from student;
+q22. select left(namefirst,5) from student;
+q23. select rpad(number,15,'*') number from student_phone;
+q24. select * from student where month(DOB) = 10;
+q25. select * from student where month(DOB) in (1,12);
+q26. select * from faculty where date_format(DOB,'%W') = 'Sunday';
+q27. select now();
+q28. select date_format(now(),'%M');
+q29. select date_format(now(),'%Y');
+q30. select * from student where date_format(DOB,'%Y') = 1984 order by DOB;
+q31. select * from student where QUARTER(DOB) = 4;
+q32. select * from student where weekofyear(DOB) = 43;
+q33. 	a. select * from student where date_format(DOB,'%d')> 9 and date_format(DOB,'%d') < 20 ;
+	b. select * from student where date_format(DOB,'%d') between 9 and 19 ;
+q34. select round((rand() * 10000 % 100)) as randomNum;
+q35. select left(namefirst,5) from student;
+q36. select * from student order by dayofweek(DOB);
+q37. select * from student where quarter(DOB) = 4;
+q38. select * from student where date_format(DOB,'%W') = 'Sunday';
+q39. select DOB, date_format(DOB,'%D of %M %Y') from student where DOB='1984-06-12';
+q40. select * from course_batches where date_format(endson,'%W') = 'Sunday';
+q41. select number, rpad(left(number,4),10,'*') as Formated from student_phone;
+q42. select number, concat(rpad(left(number,4),8,'*'),right(number,4)) as Formated from student_phone;
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+1. select ename,job,HIREDATE  from emp where hiredate between '1981-02-01' and '1981-05-31' ;
+2. select ename,HIREDATE  from emp where year(hiredate) = 1982 ;
+3.select curdate() as `Current Date` ;
